@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+:root{
+    --fundo: #f4f6f8;
+    --card: #ffffff;
+    --texto: #1f2937;
+    --principal: #2563eb;
+    --cinza: #6b7280;
+}
+
+body.dark {
+  --fundo: #111827;
+  --card: #1f2937;
+  --texto: #f9fafb;
+  --cinza: #d1d5db;
+}
+
+body{
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+header{
+    background: linear-gradient(135deg, #111827, #2563eb);
+    color: white;
+    padding: 25px 8%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1{
+    font-size: 28px;
+}
+
+#btnTema{
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.hero{
+    text-align: center;
+    padding: 70px 0;
+}
+
+.hero h2{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p{
+    font-size: 18px;
+}
+
+main{
+    padding: 40px 8%;
+}
+
+.filtros{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.filtros input,
+.filtros select{
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    flex: 1;
+    min-width: 220px;
+    background: var(--card);
+    color: var(--texto);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+  .carros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card{
+    background: var(--card);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: #2563eb;
+    padding: 15px;
+}
+
+.card-info{
+    padding: 20px;
+}
+
+.card-info h3{
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.card-info p{
+    color: var(--cinza);
+    margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.tags span {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+
+.card button{
+    width: 100%;
+    padding: 12px;
+    background: var(--principal);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card button:hover{
+    background: #1d4ed8;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content{
+     background: var(--card);
+  color: var(--texto);
+  width: 100%;
+  max-width: 550px;
+  border-radius: 18px;
+  padding: 25px;
+  position: relative;
+  animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#fecharModal{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-content img{
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+}
+
+.modal-content h2{
+    margin: 15px 0;
+}
+
+
+.modal-content p{
+    color: var(--cinza);
+    margin-bottom: 15px;
+}
+
+.modal-content ul{
+    list-style: none;
+}
+
+.modal-content li{
+    margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  header,
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+

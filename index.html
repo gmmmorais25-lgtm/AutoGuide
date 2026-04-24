@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoGuide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>AutoGuide</h1>
+    <button id="btnTema">🌙</button>
+  </nav>
+
+  <section class="hero">
+    <h2>Encontre o carro ideal para você</h2>
+    <p>Compare modelos, filtre por perfil e escolha com mais segurança.</p>
+  </section>
+</header>
+
+<main>
+  <section class="filtros">
+    <input type="text" id="busca" placeholder="Buscar por nome ou marca...">
+
+    <select id="filtroMarca">
+      <option value="todos">Todas as marcas</option>
+      <option value="Chevrolet">Chevrolet</option>
+      <option value="Fiat">Fiat</option>
+      <option value="Ford">Ford</option>
+      <option value="Honda">Honda</option>
+      <option value="Hyundai">Hyundai</option>
+      <option value="Jeep">Jeep</option>
+      <option value="Nissan">Nissan</option>
+      <option value="Renault">Renault</option>
+      <option value="Toyota">Toyota</option>
+      
+      
+      <option value="Volkswagen">Volkswagen</option>
+    </select>
+
+    <select id="filtroCategoria">
+      <option value="todos">Todas as categorias</option>
+      <option value="primeiro carro">Primeiro carro</option>
+      <option value="economico">Econômico</option>
+      <option value="suv">SUV</option>
+      <option value="sedan">Sedan</option>
+      <option value="premium">Premium</option>
+    </select>
+  </section>
+
+  <section id="listaCarros" class="carros"></section>
+</main>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="fecharModal">&times;</span>
+    <img id="modalImagem" src="" alt="">
+    <h2 id="modalNome"></h2>
+    <p id="modalDescricao"></p>
+    <ul id="modalInfo"></ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
